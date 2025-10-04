@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore-Beyond: Compare Mode</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a0033 50%, #05050f 100%);
+            color: #e4e4e4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            padding-top: 20px;
+        }
+
+        .container {
+            width: 95%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(71, 163, 255, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #47a3ff;
+            text-shadow: 0 0 10px rgba(71, 163, 255, 0.5);
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            color: #f0f0f0;
+            border-bottom: 2px solid #2e78c8;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px;
+            height: 650px; 
+            margin-top: 20px;
+        }
+
+        .compare-viewer {
+            height: 100%;
+            background-color: #000;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Compare Images Mode</h1>
+        
+        <div style="text-align: center; margin-bottom: 20px;">
+            <a href="index.html" style="
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #ffd700; 
+                color: #0f0f1a;
+                font-weight: bold;
+                text-decoration: none;
+                border-radius: 5px;
+                transition: background-color 0.2s;
+            ">
+                ← Return to single viewing mode 
+            </a>
+        </div>
+
+        <div class="controls">
+            <select id="compare-selector-left">
+                <option value="images/andromeda.dzi">Andromeda Galaxy</option>
+                <option value="images/OrionNebula.dzi">Orion Nebula</option>
+                <option value="images/Hubble Sees a Star ‘Inflating’ a Giant Bubble.dzi">Giant Bubble</option> 
+                    <option value="images/red-andromeda.dzi">Red Andromeda Galaxy</option>
+            </select>
+            
+            <select id="compare-selector-right">
+                <option value="images/OrionNebula.dzi">Orion Nebula</option>
+                <option value="images/andromeda.dzi">Andromeda Galaxy</option>
+                <option value="images/Hubble Sees a Star ‘Inflating’ a Giant Bubble.dzi">Giant Bubble</option> 
+                    <option value="images/red-andromeda.dzi">Red Andromeda Galaxy</option>
+            </select>
+            
+            <button id="confirm-compare-btn" style="background:#47a3ff; color:white; font-weight:bold;">
+                Apply comparison
+            </button>
+        </div>
+
+        <div class="comparison-grid">
+            <div id="viewer-left" class="compare-viewer"></div>
+            <div id="viewer-right" class="compare-viewer"></div>
+        </div>
+    </div>
+
+    <script src="lib/openseadragon.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

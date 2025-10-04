@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore-Beyond | Main page</title>
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            
+            background: linear-gradient(135deg, #0f0f1a 0%, #1a0033 50%, #05050f 100%);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 900px;
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.6); 
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(71, 163, 255, 0.3), 
+                        0 0 15px rgba(255, 255, 255, 0.1);
+            animation: fadeIn 1.5s ease-out; 
+        }
+
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 5px;
+            letter-spacing: 3px;
+            color: #47a3ff; 
+            text-shadow: 0 0 15px rgba(71, 163, 255, 0.8);
+        }
+
+        h2 {
+            font-size: 1.8em;
+            margin-top: 30px;
+            color: #f0f0f0;
+            border-bottom: 2px solid #2e78c8;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .team-info {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        
+        .cta-link {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #47a3ff;
+            color: #0f0f1a; 
+            font-size: 1.3em;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px; 
+            transition: all 0.3s ease-in-out;
+            text-transform: uppercase;
+            box-shadow: 0 5px 20px rgba(71, 163, 255, 0.5);
+        }
+
+        .cta-link:hover {
+            background-color: #ffffff; 
+            color: #0f0f1a;
+            transform: scale(1.05);
+            box-shadow: 0 5px 30px rgba(255, 255, 255, 0.7);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Explore-Beyond</h1>
+    <div style="font-size:1.1em; color:#ffd700; margin-bottom:18px; font-style:italic;">Made by Generation of Miracles</div>
+        <p style="font-size: 1.5em; color: #a3ccff;">NASA CHALLENGE PROJECT | COSMIC EXPLORATION</p>
+        
+        <h2>Our purpose</h2>
+        <p class="team-info">
+            We are a team of young researchers and innovators who believe in the power of science and technology to change the future.
+            Our goal is not just to participate in the NASA Project Challenge, but to make a real contribution to solving global problems.
+            Our mission is to show that even schoolchildren and students can be part of humanity's space future.
+        </p>
+
+        <h2>About this website</h2>
+        <p style="margin-bottom: 40px;">
+            **Explore-Beyond** is an interactive tool designed for detailed space exploration. 
+            Here you will find high-quality satellite images equipped with a deep zoom function,
+            which will allow you to compare and analyze the details of distant galaxies, nebulae and planets., 
+            inaccessible to the naked eye. Immerse yourself in the data that helps us understand the universe!
+        </p>
+
+        <a href="index.html" class="cta-link">
+            Start Exploring
+        </a>
+    </div>
+</body>
+</html>
